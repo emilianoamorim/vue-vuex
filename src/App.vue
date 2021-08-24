@@ -6,14 +6,11 @@
 </template>
 
 <script>
-import MainContent from "./components/MainContent.vue";
-import HeaderContent from "./components/HeaderContent.vue";
-
 export default {
   name: "App",
   components: {
-    MainContent,
-    HeaderContent,
+    MainContent: () => import("./components/MainContent.vue"),
+    HeaderContent: () => import("./components/HeaderContent.vue"),
   },
 };
 </script>

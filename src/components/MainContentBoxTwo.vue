@@ -4,7 +4,7 @@
       <input type="text" v-model="name" placeholder="Atualizar nome" />
     </div>
     <div>
-      <button type="button" @click="saveUserName()">Salvar</button>
+      <button type="button" @click="[saveUserName()]">Salvar</button>
     </div>
   </div>
 </template>

@@ -8,11 +8,7 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
 export default {
-  methods: {
-    ...mapMutations(["MUTATION_USER"]),
-  },
   computed: {
     skills() {
       return this.$store.getters.skills;

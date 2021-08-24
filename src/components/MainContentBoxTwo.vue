@@ -10,19 +10,29 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapMutations, mapState } from "vuex";
 export default {
   data: () => ({
     name: "",
   }),
   methods: {
     saveUserName() {
+      // Invalido
+      // this.user.name = this.name;
+      // Valido
+
       this.MUTATION_USER({
         name: this.name,
       });
+
       this.name = "";
     },
     ...mapMutations(["MUTATION_USER"]),
+  },
+  computed: {
+    ...mapState({
+      user: (state) => state.user,
+    }),
   },
 };
 </script>
